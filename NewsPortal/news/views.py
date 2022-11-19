@@ -15,6 +15,7 @@ class NewsList(ListView):
     # Это имя списка, в котором будут лежать все объекты.
     # Его надо указать, чтобы обратиться к списку объектов в html-шаблоне.
     context_object_name = 'news'
+    paginate_by = 10  # вот так мы можем указать количество записей на странице
 
 
 class PostDetail(DetailView):
