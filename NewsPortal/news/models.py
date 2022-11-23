@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Create your models here.
 
@@ -26,6 +27,9 @@ class Author(models.Model):
         self.rate = 3 * post_rate + comment_rate + post_comment_rate
         self.save()
 
+    def __str__(self):
+        return self.author.username
+
 
 # Модель Category
 # Категории новостей/статей — темы, которые они отражают (спорт, политика, образование и т. д.).
@@ -33,6 +37,9 @@ class Author(models.Model):
 # Поле должно быть уникальным (в определении поля необходимо написать параметр unique = True).
 class Category(models.Model):
     category_name = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.category_name
 
 
 # Модель Post
@@ -54,7 +61,7 @@ POST_KINDS = [
 
 class Post(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    kind = models.CharField(max_length=2, choices=POST_KINDS, default='AR')
+    kind = models.CharField(max_length=2, choices=POST_KINDS)
     add_date = models.DateTimeField(auto_now_add=True)
     category = models.ManyToManyField(Category, through='PostCategory')
     title = models.CharField(max_length=255)
@@ -80,6 +87,9 @@ class Post(models.Model):
 
     def __str__(self):
         return f'{self.title}\n{self.add_date.strftime("%d.%m.%Y")}\n{self.text}'
+
+    def get_absolute_url(self):
+        return reverse('post', args=[str(self.id)])
 
 
 # Модель PostCategory

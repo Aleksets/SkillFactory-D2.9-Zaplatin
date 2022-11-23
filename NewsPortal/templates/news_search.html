@@ -1,26 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 
 <!--  загружаем пользовательские фильтры -->
 {% load custom_filters %}
-<!-- Название у нас будет News -->
+<!-- Название у нас будет News Search-->
 {% block title %}
-    News
+    News Search
 {% endblock title %}
 
 <!-- В контенте на странице мы выводим все новости/статьи -->
 {% block content %}
     <h1>Новости и статьи</h1>
-    <h3>Всего на текущий момент: {{ page_obj.paginator.count }}</h3>
+    <h3>Всего найдено новостей: {{ page_obj.paginator.count }}</h3>
+    {# Добавляем форму, которая объединяет набор полей, которые будут отправляться в запросе #}
+    <form action="" method="get">
+        {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
+        {{ filterset.form.as_p }}
+        {# Добавим кнопку отправки данных формы #}
+        <input type="submit" value="Найти" />
+    </form>
     <hr>
-    {% if news %}
+    {% if news_search %}
         <table>
             <tr>
                 <td>Заголовок</td>
                 <td>Дата публикации</td>
                 <td>Превью</td>
             </tr>
-            {% for post in news %}
+            {% for post in news_search %}
             <tr>
                 <td>{{ post.title|censor }}</td>
                 <td>{{ post.add_date|date:'d.m.Y' }}</td>
@@ -29,7 +38,7 @@
             {% endfor %}
         </table>
     {% else %}
-        <h2>Новостей нет!</h2>
+        <h2>Новости по заданным критериям поиска отсутствуют!</h2>
     {% endif %}
 
     {# Добавляем пагинацию на страницу #}
@@ -59,3 +68,4 @@
         {% endif %}
     {% endif %}
 {% endblock content %}
+</html>
