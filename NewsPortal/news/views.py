@@ -5,6 +5,7 @@ from .models import Post
 from .filters import PostFilter
 from .forms import PostForm
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import PermissionRequiredMixin
 
 
 class NewsList(ListView):
@@ -66,24 +67,30 @@ class NewsSearch(ListView):
 
 
 # Добавляем новое представление для публикации новости.
-class PostCreate(CreateView):
+class PostCreate(PermissionRequiredMixin, CreateView):
+    permission_required = ('news.add_post',)
     # Указываем нашу разработанную форму
     form_class = PostForm
     # модель новостей
     model = Post
     # и новый шаблон, в котором используется форма.
     template_name = 'post_edit.html'
+    # context_object_name = 'post_create'
 
 
 # Добавляем представление для изменения новости/статьи.
-class PostUpdate(UpdateView):
+class PostUpdate(PermissionRequiredMixin, UpdateView):
+    permission_required = ('news.change_post',)
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'
+    # context_object_name = 'post_update'
 
 
 # Представление, удаляющее новость/статью.
-class PostDelete(DeleteView):
+class PostDelete(PermissionRequiredMixin, DeleteView):
+    permission_required = ('news.delete_post',)
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('news')
+    # context_object_name = 'post_delete'

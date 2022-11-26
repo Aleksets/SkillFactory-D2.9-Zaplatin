@@ -19,12 +19,24 @@
                 <td>Заголовок</td>
                 <td>Дата публикации</td>
                 <td>Превью</td>
+                {% if perms.news.change_post or perms.news.delete_post %}
+                    <td>Действия</td>
+                {% endif %}
             </tr>
             {% for post in news %}
             <tr>
                 <td>{{ post.title|censor }}</td>
                 <td>{{ post.add_date|date:'d.m.Y' }}</td>
                 <td>{{ post.text|truncatechars:21|censor }}</td>
+                <td>
+                    {# Здесь доступ для каждой ссылки теперь будем проверять отдельно #}
+                    {% if perms.news.change_post %}
+                        <a href="{% url 'post_update' post.id %}">Изменить</a>
+                    {% endif %}
+                    {% if perms.news.delete_post %}
+                        <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                    {% endif %}
+                </td>
             </tr>
             {% endfor %}
         </table>
