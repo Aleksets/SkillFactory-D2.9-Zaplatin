@@ -2,8 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 
-# Create your models here.
-
 
 # Модель Author
 # Модель, содержащая объекты всех авторов.
@@ -37,6 +35,7 @@ class Author(models.Model):
 # Поле должно быть уникальным (в определении поля необходимо написать параметр unique = True).
 class Category(models.Model):
     category_name = models.CharField(max_length=50, unique=True)
+    subscribers = models.ManyToManyField(User)
 
     def __str__(self):
         return self.category_name
@@ -100,6 +99,9 @@ class PostCategory(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.category
+
 
 # Модель Comment
 # Под каждой новостью/статьёй можно оставлять комментарии, поэтому необходимо организовать
@@ -126,3 +128,6 @@ class Comment(models.Model):
     def dislike(self):
         self.rate -= 1
         self.save()
+
+    def __str__(self):
+        return self.text

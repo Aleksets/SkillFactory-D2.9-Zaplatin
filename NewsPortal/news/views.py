@@ -1,11 +1,10 @@
-# Импортируем класс, который говорит нам о том,
-# что в этом представлении мы будем выводить список объектов из БД
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Post
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from .models import Post, Author
 from .filters import PostFilter
 from .forms import PostForm
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import PermissionRequiredMixin
+from django.core.exceptions import PermissionDenied
 
 
 class NewsList(ListView):
@@ -23,12 +22,10 @@ class NewsList(ListView):
 
 
 class PostDetail(DetailView):
-    # Модель всё та же, но мы хотим получать информацию по отдельному товару
+    # Модель всё та же, но мы хотим получать информацию по отдельной новости/статье
     model = Post
-    # Используем другой шаблон — product.html
+    # Используем другой шаблон — post.html
     template_name = 'post.html'
-    # Название объекта, в котором будет выбранный пользователем продукт
-    context_object_name = 'post'
 
 
 class NewsSearch(ListView):
@@ -67,7 +64,8 @@ class NewsSearch(ListView):
 
 
 # Добавляем новое представление для публикации новости.
-class PostCreate(PermissionRequiredMixin, CreateView):
+class PostCreate(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
+    raise_exception = True
     permission_required = ('news.add_post',)
     # Указываем нашу разработанную форму
     form_class = PostForm
@@ -77,18 +75,43 @@ class PostCreate(PermissionRequiredMixin, CreateView):
     template_name = 'post_edit.html'
     # context_object_name = 'post_create'
 
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        # Добавляем текущего пользователя в форму
+        self.object.author = Author.objects.get(author=self.request.user)
+        self.object.save()
+        return super().form_valid(form)
+
 
 # Добавляем представление для изменения новости/статьи.
-class PostUpdate(PermissionRequiredMixin, UpdateView):
+class PostUpdate(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
+    raise_exception = True
     permission_required = ('news.change_post',)
     form_class = PostForm
     model = Post
     template_name = 'post_edit.html'
-    # context_object_name = 'post_update'
+
+    # Проверяем, является ли авторизованный пользователь автором статьи,
+    # которую он пытается изменить.
+    # Если да, то позволяем ему изменять статью,
+    # Если нет - переносим его на 403.html
+    def get_object(self, queryset=None):
+        obj = UpdateView.get_object(self, queryset=None)
+        if not obj.author.author == self.request.user:
+            raise PermissionDenied
+        return obj
+
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        # Добавляем текущего пользователя в форму
+        self.object.author = Author.objects.get(author=self.request.user)
+        self.object.save()
+        return super().form_valid(form)
 
 
 # Представление, удаляющее новость/статью.
-class PostDelete(PermissionRequiredMixin, DeleteView):
+class PostDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
+    raise_exception = True
     permission_required = ('news.delete_post',)
     model = Post
     template_name = 'post_delete.html'
