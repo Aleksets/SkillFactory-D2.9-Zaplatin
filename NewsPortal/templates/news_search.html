@@ -5,6 +5,8 @@
 
 <!--  загружаем пользовательские фильтры -->
 {% load custom_filters %}
+<!--  загружаем пользовательские тэги -->
+{% load custom_tags %}
 <!-- Название у нас будет News Search-->
 {% block title %}
     News Search
@@ -62,12 +64,12 @@
 
     {# Информация о предыдущих страницах #}
     {% if page_obj.has_previous %}
-        <a href="?page=1">1</a>
+        <a href="?{% url_replace page=1 %}">1</a>
         {% if page_obj.previous_page_number != 1 %}
             {% if page_obj.previous_page_number != 2 %}
                 ...
             {% endif %}
-            <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+            <a href="?{% url_replace page=page_obj.previous_page_number %}">{{ page_obj.previous_page_number }}</a>
         {% endif %}
     {% endif %}
 
@@ -76,12 +78,12 @@
 
     {# Информация о следующих страницах #}
     {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+        <a href="?{% url_replace page=page_obj.next_page_number %}">{{ page_obj.next_page_number }}</a>
         {% if paginator.num_pages != page_obj.next_page_number  %}
             {% if paginator.num_pages|add:-1 != page_obj.next_page_number %}
                 ...
             {% endif %}
-            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+            <a href="?{% url_replace page=page_obj.paginator.num_pages %}">{{ page_obj.paginator.num_pages }}</a>
         {% endif %}
     {% endif %}
 {% endblock content %}

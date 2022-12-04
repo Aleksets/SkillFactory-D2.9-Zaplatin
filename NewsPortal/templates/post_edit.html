@@ -5,9 +5,14 @@
 <h1>Добавление/изменение новости/статьи</h1>
 <hr>
 <form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Save" />
+    {% if post_limit %}
+        Вы не можете публиковать более трёх новостей в сутки!
+        <p>Вернутся к <a href="{%  url 'news' %}">списку новостей</a>.</p>
+    {% else %}
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Save"/>
+    {% endif %}
 </form>
 {% endblock content %}
 </html>

@@ -1,10 +1,14 @@
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
-from .models import Post, Author
+from django.core.exceptions import PermissionDenied
+from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.utils import timezone
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from .filters import PostFilter
 from .forms import PostForm
-from django.core.exceptions import PermissionDenied
+from .models import Post, Author, Category
 
 
 class NewsList(ListView):
@@ -82,6 +86,15 @@ class PostCreate(LoginRequiredMixin, PermissionRequiredMixin, CreateView):
         self.object.save()
         return super().form_valid(form)
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        limit = settings.DAILY_POST_LIMIT
+        prev_day = timezone.now() - timezone.timedelta(days=1)
+        posts_day_count = Post.objects.filter(add_date__gte=prev_day, author__author=self.request.user).count()
+        if limit <= posts_day_count:
+            context['post_limit'] = True
+        return context
+
 
 # Добавляем представление для изменения новости/статьи.
 class PostUpdate(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
@@ -117,3 +130,23 @@ class PostDelete(LoginRequiredMixin, PermissionRequiredMixin, DeleteView):
     template_name = 'post_delete.html'
     success_url = reverse_lazy('news')
     # context_object_name = 'post_delete'
+
+
+@login_required
+def subscribe(request, pk1, pk2):
+    post = Post.objects.get(id=pk1)
+    user = request.user
+    category = Category.objects.get(id=pk2)
+    category.subscribers.add(user)
+    message = 'Вы успешно подписались на рассылку новостей в категории'
+    return render(request, 'subscribe.html', {'post': post, 'category': category, 'message': message})
+
+
+@login_required
+def unsubscribe(request, pk1, pk2):
+    post = Post.objects.get(id=pk1)
+    user = request.user
+    category = Category.objects.get(id=pk2)
+    category.subscribers.remove(user)
+    message = 'Вы успешно отписались от рассылки новостей в категории'
+    return render(request, 'unsubscribe.html', {'post': post, 'category': category, 'message': message})

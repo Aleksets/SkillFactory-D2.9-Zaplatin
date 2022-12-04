@@ -1,0 +1,13 @@
+<!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
+{% extends 'flatpages/default.html' %}
+
+<!-- Название страницы -->
+{% block title %}
+    Подписка на категорию "{{category}}"
+{% endblock title %}
+
+{% block content %}
+    <h1>{{ message }} "{{ category }}"</h1>
+    <a href="{% url 'post' post.id %}">Перейти на страницу новости</a>
+
+{% endblock content %}

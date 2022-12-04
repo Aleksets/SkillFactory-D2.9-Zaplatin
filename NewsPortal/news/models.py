@@ -1,5 +1,5 @@
-from django.db import models
 from django.contrib.auth.models import User
+from django.db import models
 from django.urls import reverse
 
 
@@ -35,7 +35,8 @@ class Author(models.Model):
 # Поле должно быть уникальным (в определении поля необходимо написать параметр unique = True).
 class Category(models.Model):
     category_name = models.CharField(max_length=50, unique=True)
-    subscribers = models.ManyToManyField(User)
+    # добавление категорий, на которые подписан User
+    subscribers = models.ManyToManyField(User, related_name='categories')
 
     def __str__(self):
         return self.category_name

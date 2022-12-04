@@ -2,7 +2,6 @@ from django_filters import FilterSet, ModelMultipleChoiceFilter, DateFilter
 from django.forms import DateInput
 from .models import Post, Category
 
-
 # Создаем свой набор фильтров для модели Post.
 class PostFilter(FilterSet):
     # поиск по категории

@@ -49,13 +49,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'news',
+    'news.apps.NewsConfig',
     'accounts',
     'django_filters',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.yandex',
+    'django_apscheduler',
 ]
 
 SITE_ID = 1
@@ -156,4 +157,31 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_EMAIL_VERIFICATION = 'none'
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+# адрес сайта
+SITE_URL = os.getenv("SITE_URL")
+# адрес сервера для отправки почты
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+# порт сервера для отправки почты
+EMAIL_PORT = 465
+# ваше имя пользователя на сервере для отправки почты (всё, что идёт до @)
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+# пароль пользователя на сервере для отправки почты
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+# использование ssl
+EMAIL_USE_SSL = True
+# почтовый адрес для отправки почты по умолчанию
+DEFAULT_FROM_EMAIL = os.getenv("DEFAULT_FROM_EMAIL")
+
+# количество публикаций, которое автор может делать в течение суток
+DAILY_POST_LIMIT = 3
+
+# формат даты, которую будет воспринимать наш задачник
+# (вспоминаем модуль по фильтрам)
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
+
+# если задача не выполняется за 25 секунд, она автоматически снимается,
+# можно поставить время больше, но, как правило, это сильно бьёт
+# по производительности сервера
+APSCHEDULER_RUN_NOW_TIMEOUT = 25  # Seconds

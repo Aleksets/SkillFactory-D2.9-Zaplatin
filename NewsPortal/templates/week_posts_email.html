@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p>Здравствуй, {{ username }}! Новости за прошедшую неделю в разделе "{{ category }}"!</p>
+    {% for post in posts %}
+        <p><a href="{{ link }}{{ post.id }}">{{ post.title }}</a></p>
+    {% endfor %}
+</body>
+</html>
