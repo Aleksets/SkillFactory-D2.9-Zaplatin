@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User
+from django.core.cache import cache
 from django.db import models
 from django.urls import reverse
 
@@ -90,6 +91,13 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post', args=[str(self.id)])
+
+    # переопределим метод save
+    def save(self, *args, **kwargs):
+        # сначала вызываем метод родителя, чтобы объект сохранился
+        super().save(*args, **kwargs)
+        # затем удаляем его из кэша, чтобы сбросить его
+        cache.delete(f'post-{self.pk}')
 
 
 # Модель PostCategory

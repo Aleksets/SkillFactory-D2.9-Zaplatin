@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+from django.core.cache import cache  # импортируем наш кэш
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import render
 from django.urls import reverse_lazy
@@ -9,7 +10,6 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from .filters import PostFilter
 from .forms import PostForm
 from .models import Post, Author, Category
-
 
 class NewsList(ListView):
     # Указываем модель, объекты которой мы будем выводить
@@ -28,8 +28,19 @@ class NewsList(ListView):
 class PostDetail(DetailView):
     # Модель всё та же, но мы хотим получать информацию по отдельной новости/статье
     model = Post
-    # Используем другой шаблон — post.html
+    # Используем шаблон post.html
     template_name = 'post.html'
+
+    # переопределяем метод получения объекта
+    def get_object(self, *args, **kwargs):
+        # кэш очень похож на словарь, и метод get действует так же.
+        # Он забирает значение по ключу, если его нет, то забирает None.
+        obj = cache.get(f'post-{self.kwargs["pk"]}', None)
+        # если объекта нет в кэше, то получаем его и записываем в кэш
+        if not obj:
+            obj = super().get_object(queryset=self.queryset)
+            cache.set(f'post-{self.kwargs["pk"]}', obj)
+        return obj
 
 
 class NewsSearch(ListView):

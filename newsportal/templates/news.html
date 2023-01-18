@@ -3,11 +3,14 @@
 
 <!--  загружаем пользовательские фильтры -->
 {% load custom_filters %}
+<!--  загружаем кэш -->
+{% load cache %}
 <!-- Название у нас будет News -->
-{% block title %}
-    News
-{% endblock title %}
-
+{% cache 30 title %}
+    {% block title %}
+        News
+    {% endblock title %}
+{% endcache %}
 <!-- В контенте на странице мы выводим все новости/статьи -->
 {% block content %}
     <h1>Новости и статьи</h1>
@@ -15,33 +18,37 @@
     <hr>
     {% if news %}
         <table>
-            <tr>
-                <td>Заголовок</td>
-                <td>Дата публикации</td>
-                <td>Превью</td>
-                {% if perms.news.change_post or perms.news.delete_post %}
-                    <td>Действия</td>
-                {% endif %}
-            </tr>
+            {% cache 30 header %}
+                <tr>
+                    <td>Заголовок</td>
+                    <td>Дата публикации</td>
+                    <td>Превью</td>
+                    {% if perms.news.change_post or perms.news.delete_post %}
+                        <td>Действия</td>
+                    {% endif %}
+                </tr>
+            {% endcache %}
             {% for post in news %}
             <tr>
                 <td><a href="{% url 'post' post.id %}">{{ post.title|censor }}</a></td>
                 <td>{{ post.add_date|date:'d.m.Y' }}</td>
                 <td>{{ post.text|truncatechars:21|censor }}</td>
-                <td>
-                    {# Здесь доступ для каждой ссылки теперь будем проверять отдельно #}
-                    {% if request.user.is_staff %}
-                        <a href="{% url 'post_update' post.id %}">Изменить</a>
-                        <a href="{% url 'post_delete' post.id %}">Удалить</a>
-                    {% elif post.author.author == request.user %}
-                        {% if perms.news.change_post %}
+                {% cache 30 actions %}
+                    <td>
+                        {# Здесь доступ для каждой ссылки теперь будем проверять отдельно #}
+                        {% if request.user.is_staff %}
                             <a href="{% url 'post_update' post.id %}">Изменить</a>
-                        {% endif %}
-                        {% if perms.news.delete_post %}
                             <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                        {% elif post.author.author == request.user %}
+                            {% if perms.news.change_post %}
+                                <a href="{% url 'post_update' post.id %}">Изменить</a>
+                            {% endif %}
+                            {% if perms.news.delete_post %}
+                                <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                            {% endif %}
                         {% endif %}
-                    {% endif %}
-                </td>
+                    </td>
+                {% endcache %}
             </tr>
             {% endfor %}
         </table>
@@ -49,30 +56,32 @@
         <h2>Новостей нет!</h2>
     {% endif %}
 
-    {# Добавляем пагинацию на страницу #}
+    {% cache 30 pagination %}
+        {# Добавляем пагинацию на страницу #}
 
-    {# Информация о предыдущих страницах #}
-    {% if page_obj.has_previous %}
-        <a href="?page=1">1</a>
-        {% if page_obj.previous_page_number != 1 %}
-            {% if page_obj.previous_page_number != 2 %}
-                ...
+        {# Информация о предыдущих страницах #}
+        {% if page_obj.has_previous %}
+            <a href="?page=1">1</a>
+            {% if page_obj.previous_page_number != 1 %}
+                {% if page_obj.previous_page_number != 2 %}
+                    ...
+                {% endif %}
+                <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
             {% endif %}
-            <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
         {% endif %}
-    {% endif %}
 
-    {# Информация о текущей странице #}
-    {{ page_obj.number }}
+        {# Информация о текущей странице #}
+        {{ page_obj.number }}
 
-    {# Информация о следующих страницах #}
-    {% if page_obj.has_next %}
-        <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
-        {% if paginator.num_pages != page_obj.next_page_number  %}
-            {% if paginator.num_pages|add:-1 != page_obj.next_page_number %}
-                ...
+        {# Информация о следующих страницах #}
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+            {% if paginator.num_pages != page_obj.next_page_number  %}
+                {% if paginator.num_pages|add:-1 != page_obj.next_page_number %}
+                    ...
+                {% endif %}
+                <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
             {% endif %}
-            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
         {% endif %}
-    {% endif %}
+    {% endcache %}
 {% endblock content %}

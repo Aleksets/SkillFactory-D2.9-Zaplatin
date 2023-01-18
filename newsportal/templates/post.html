@@ -3,10 +3,14 @@
 
 <!--  загружаем пользовательские фильтры -->
 {% load custom_filters %}
+<!--  загружаем кэш -->
+{% load cache %}
 <!-- Название у нас будет Новость/статья -->
-{% block title %}
-    Новость/статья
-{% endblock title %}
+{% cache 30 title %}
+    {% block title %}
+        Новость/статья
+    {% endblock title %}
+{% endcache %}
 
 <!-- В контенте на странице мы выводим саму новость/статью,
  идентификатор которого был передан в url -->
@@ -15,16 +19,18 @@
     <h3>{{ post.add_date|date:'d.m.Y' }}</h3>
     <hr>
     <p>{{ post.text|censor }}</p>
-    {% if request.user.is_authenticated %}
-        {% for category in post.category.all %}
-            {% if category not in request.user.categories.all %}
-                <p><a href="{% url 'subscribe' post.id category.id %}">Подписаться на категорию "{{ category }}"</a></p>
-            {% else %}
-                <p>
-                    Вы уже подписаны на категорию "{{ category }}"
-                    <a href="{% url 'unsubscribe' post.id category.id %}">Отписаться</a>
-                </p>
-            {% endif %}
-        {% endfor %}
-    {% endif %}
+    {% cache 30 subscribe %}
+        {% if request.user.is_authenticated %}
+            {% for category in post.category.all %}
+                {% if category not in request.user.categories.all %}
+                    <p><a href="{% url 'subscribe' post.id category.id %}">Подписаться на категорию "{{ category }}"</a></p>
+                {% else %}
+                    <p>
+                        Вы уже подписаны на категорию "{{ category }}"
+                        <a href="{% url 'unsubscribe' post.id category.id %}">Отписаться</a>
+                    </p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endcache%}
 {% endblock content %}

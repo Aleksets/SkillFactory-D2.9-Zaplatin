@@ -1,3 +1,5 @@
 /venv/
 /virtenv/
 /.env
+/newsportal/cache_files/
+/newsportal/celerybeat-schedule.db
