@@ -11,6 +11,7 @@ from .filters import PostFilter
 from .forms import PostForm
 from .models import Post, Author, Category
 
+
 class NewsList(ListView):
     # Указываем модель, объекты которой мы будем выводить
     model = Post
@@ -126,7 +127,7 @@ class PostUpdate(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
         return obj
 
     def form_valid(self, form):
-        self.object = form.save(commit=False)
+        self.obje = form.save(commit=False)
         # Добавляем текущего пользователя в форму
         self.object.author = Author.objects.get(author=self.request.user)
         self.object.save()
