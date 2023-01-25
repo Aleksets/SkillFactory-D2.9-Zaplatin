@@ -250,7 +250,7 @@ LOGGING = {
             'formatter': 'error'
         },
         'general': {
-            'level': 'INFO',
+            'level': 'DEBUG',
             'formatter': 'general',
             'filters': ['require_debug_false'],
             'class': 'logging.FileHandler',
@@ -278,13 +278,11 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console_debug', 'console_warning', 'console_error', 'general'],
-            # 'handlers': ['general'],
-            'level': 'DEBUG',
+            'level': 'ERROR',
             'propagate': True,
         },
         'django.request': {
             'handlers': ['errors', 'mail_admins'],
-            # 'handlers': ['errors'],
             'level': 'ERROR',
             'propagate': True,
         },
