@@ -250,7 +250,7 @@ LOGGING = {
             'formatter': 'error'
         },
         'general': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'formatter': 'general',
             'filters': ['require_debug_false'],
             'class': 'logging.FileHandler',
