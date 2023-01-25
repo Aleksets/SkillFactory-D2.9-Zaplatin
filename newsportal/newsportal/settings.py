@@ -9,9 +9,6 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-import logging
-
-import django.utils.log
 # importing the load_dotenv from the python-dotenv module
 from dotenv import load_dotenv
 
@@ -205,6 +202,8 @@ CACHES = {
     }
 }
 
+ADMINS = [os.getenv("ADMIN_NAME"), os.getenv("ADMIN_EMAIL")]
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -263,7 +262,7 @@ LOGGING = {
             'filename': 'errors.log',
         },
         'security': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'formatter': 'general',
             'class': 'logging.FileHandler',
             'filename': 'security.log',
