@@ -1,1 +1,3 @@
-Подтверждение регистрации
+{% load i18n %} <!-- Загружаем теги с переводами -->
+
+{% trans "Confirmation of registration" %}

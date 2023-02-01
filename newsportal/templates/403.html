@@ -1,19 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+{% load i18n %}
+<html lang="en">
 <head>
    <meta charset="UTF-8">
-   <title>Ошибка 403</title>
+   <title>{% trans "Error 403" %}</title>
 </head>
 <body>
-    <h1>У Вас определённо нет доступа к данной странице...</h1>
-    <p>В случае, если Вы уже авторизовались, возможно, стоит обратиться к администратору сайта.</p>
+    <h1>{% trans "You definitely don't have access to this page..." %}</h1>
+    <p>{% trans "If you are already logged in, you may need to contact the site administrator." %}</p>
     <p>
-        Если Вы не зарегистрированы на сайте, милости просим:
-        <a href="/accounts/signup">Зарегистрироваться на сайте</a>
+        {% trans "If you are not registered on the site, you are welcome:" %}
+        <a href="/accounts/signup">{% trans "Register on the site" %}</a>
     </p>
     <p>
-        Если Вы еще не авторизованы на сайте, предлагаем сделать это:
-        <a href="/accounts/login">Авторизоваться на сайте</a>
+        {% trans "If you are not yet authorized on the site, we suggest you do this:" %}
+        <a href="/accounts/login">{% trans "Authorize to the site" %}</a>
     </p>
 </body>
 </html>

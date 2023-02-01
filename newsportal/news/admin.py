@@ -1,5 +1,16 @@
 from django.contrib import admin
 from .models import Author, Category, Post, PostCategory, Comment
+# импортируем модель админки для организации перевода моделей
+from modeltranslation.admin import TranslationAdmin
+
+
+# Регистрируем модели для перевода в админке
+class CategoryAdminTranslate(TranslationAdmin):
+    model = Category
+
+
+class PostAdminTranslate(TranslationAdmin):
+    model = Post
 
 
 # создаём новый класс для представления товаров в админке
@@ -32,7 +43,9 @@ class CommentAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Author, AuthorAdmin)
-admin.site.register(Category, CategoryAdmin)
-admin.site.register(Post, PostAdmin)
+admin.site.register(Category, CategoryAdminTranslate)
+# admin.site.register(Category, CategoryAdmin)
+admin.site.register(Post, PostAdminTranslate)
+# admin.site.register(Post, PostAdmin)
 admin.site.register(PostCategory, PostCategoryAdmin)
 admin.site.register(Comment, CommentAdmin)

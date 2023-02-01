@@ -41,6 +41,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',  # обязательно вписать перед админом!
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -64,15 +65,21 @@ SITE_ID = 1
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'news.middlewares.TimezoneMiddleware',  # have to add that middleware for timezone localization!
 ]
 
 ROOT_URLCONF = 'newsportal.urls'
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale')
+]
 
 TEMPLATES = [
     {
@@ -91,7 +98,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'newsportal.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -127,6 +133,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
+
+LANGUAGES = [
+    ('en-us', 'English'),
+    ('ru', 'Русский'),
+]
 
 TIME_ZONE = 'UTC'
 
@@ -195,10 +206,15 @@ CELERY_TIMEZONE = 'Europe/Moscow'
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        # Это полноценное кеширование с использованием файла
+        # 'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
         # Указываем, куда будем сохранять кэшируемые файлы!
         # Не забываем создать папку cache_files внутри папки с manage.py!
         'LOCATION': os.path.join(BASE_DIR, 'cache_files'),
+
+        # Это фиктивное кеширование, по сути отключение кеширования для отладки.
+        # Менять код нигде больше не надо, что удобно
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
     }
 }
 
@@ -231,7 +247,7 @@ LOGGING = {
     },
     'handlers': {
         'console_debug': {
-            'level': 'DEBUG',
+            'level': 'INFO',
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
             'formatter': 'debug'
@@ -277,7 +293,7 @@ LOGGING = {
     'loggers': {
         'django': {
             'handlers': ['console_debug', 'console_warning', 'console_error', 'general'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': True,
         },
         'django.request': {
@@ -302,7 +318,7 @@ LOGGING = {
         },
         'django.security': {
             'handlers': ['security'],
-            'level': 'DEBUG',
+            'level': 'INFO',
             'propagate': True,
         },
     }

@@ -3,6 +3,7 @@ from django.conf import settings
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string  # импортируем функцию, которая срендерит наш html в текст
 from django.utils import timezone
+from django.utils.translation import gettext as _ # импортируем функцию для перевода
 from .models import Post, Category
 import re
 
@@ -64,7 +65,7 @@ def week_posts_email():
                     # конструктор письма
                     msg = EmailMultiAlternatives(
                         # тема
-                        subject='Новости за прошедшую неделю',
+                        subject=_('News for the past week'),
                         # текст
                         body='',
                         # от

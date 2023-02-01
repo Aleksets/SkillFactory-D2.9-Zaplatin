@@ -1,0 +1,1456 @@
+2023-01-29 14:05:32,135 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("<ExtendsNode: extends 'flatpages/default.html'> must be the first tag in the template."), <traceback object at 0x00000279033EFD40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 514, in parse
+    self.extend_nodelist(nodelist, compiled_result, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 531, in extend_nodelist
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: <ExtendsNode: extends 'flatpages/default.html'> must be the first tag in the template.
+2023-01-29 14:05:32,153 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 154603
+2023-01-29 14:24:02,448 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 59
+2023-01-29 15:25:07,550 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError('Could not parse the remainder: \'"You\' from \'"You\''), <traceback object at 0x000001D5CC6575C0>): Internal Server Error: /news/create/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 954, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\templatetags\i18n.py", line 403, in do_translate
+    message_string = parser.compile_filter(bits[1])
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '"You' from '"You'
+2023-01-29 15:25:07,566 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/create/ HTTP/1.1" 500 206770
+2023-01-29 17:23:49,278 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002672A350EC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:23:49,288 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:29:25,670 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000001AEAD49BD40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:29:25,681 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:30:52,961 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000001C41AD16240>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:30:52,971 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:30:54,933 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000001C41ABEFE00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:30:54,942 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:31:56,415 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002BC4E457D00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:31:56,426 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:31:58,278 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002BC4E24F400>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:31:58,288 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:37:47,806 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x00000299362D0D80>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:37:47,817 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:37:49,349 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000002993622F3C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 17:37:49,357 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 199902
+2023-01-29 17:45:40,836 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x00000206862D50C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?
+2023-01-29 17:45:40,848 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 230423
+2023-01-29 17:53:17,514 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x000002875E9C1CC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?
+2023-01-29 17:53:17,525 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 242803
+2023-01-29 18:00:58,825 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x000001B87D775CC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?
+2023-01-29 18:00:58,837 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 243146
+2023-01-29 18:01:21,975 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?"), <traceback object at 0x000001CC86E71B00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 17: 'get_hour'. Did you forget to register or load this tag?
+2023-01-29 18:01:21,987 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 243146
+2023-01-29 18:03:25,695 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("'news' is not a registered namespace"), <traceback object at 0x000001CC86FC5580>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'news'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\views.py", line 47, in post
+    return redirect('news:news')
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'news' is not a registered namespace
+2023-01-29 18:03:25,701 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "POST /news/ HTTP/1.1" 500 103014
+2023-01-29 18:04:42,852 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("'news' is not a registered namespace"), <traceback object at 0x000002AD1E49A6C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+KeyError: 'news'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\views.py", line 47, in post
+    return redirect('news:news')
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'news' is not a registered namespace
+2023-01-29 18:04:42,858 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "POST /news/ HTTP/1.1" 500 103013
+2023-01-29 18:07:09,230 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.urls.exceptions.NoReverseMatch'>, NoReverseMatch("Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name."), <traceback object at 0x000001A73679EEC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'set_timezone' not found. 'set_timezone' is not a valid view function or pattern name.
+2023-01-29 18:07:09,241 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 210223
+2023-01-29 18:11:59,132 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateDoesNotExist'>, TemplateDoesNotExist('default.html'), <traceback object at 0x00000201EC6AF380>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\views.py", line 48, in get
+    return HttpResponse(render(request, 'default.html', context))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: default.html
+2023-01-29 18:11:59,138 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 127348
+2023-01-29 18:13:00,946 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001989BD49380>): Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:13:00,949 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET / HTTP/1.1" 500 70603
+2023-01-29 18:13:20,313 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001989BC6D500>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:13:20,315 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70309
+2023-01-29 18:13:30,188 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001989BBE2780>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:13:30,190 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70577
+2023-01-29 18:14:16,912 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000028639805CC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:14:16,915 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70577
+2023-01-29 18:14:29,829 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x00000174FCEDCFC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:14:29,833 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70577
+2023-01-29 18:14:52,057 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000023A67539900>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:14:52,061 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70577
+2023-01-29 18:15:18,730 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000002CFF6365EC0>): Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:15:18,734 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET / HTTP/1.1" 500 70310
+2023-01-29 18:16:49,949 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001D0A3CCBD00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:16:49,952 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70440
+2023-01-29 18:17:47,537 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001D0A3B81EC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:17:47,540 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70577
+2023-01-29 18:18:17,048 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000028A106FC480>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:18:17,052 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70577
+2023-01-29 18:20:59,604 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000028A10647DC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:20:59,606 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70577
+2023-01-29 18:27:06,946 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000028A103BDC00>): Internal Server Error: /news/search/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:27:06,950 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/search/ HTTP/1.1" 500 70505
+2023-01-29 18:30:47,617 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001D6F0508480>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:30:47,621 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70440
+2023-01-29 18:32:55,163 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000023C8DF13100>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:32:55,167 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70420
+2023-01-29 18:33:45,874 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000023C8DD77A00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:33:45,877 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70420
+2023-01-29 18:33:47,899 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000023C8DD70EC0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:33:47,903 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70420
+2023-01-29 18:34:18,953 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000023C8DBF6E40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:34:18,956 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70420
+2023-01-29 18:36:20,761 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000026FACC87C40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:36:20,765 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70420
+2023-01-29 18:37:01,080 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 59
+2023-01-29 18:37:48,326 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000014ECA6DBE00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:37:48,330 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70433
+2023-01-29 18:39:55,406 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001A04D9CB3C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:39:55,410 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70433
+2023-01-29 18:39:57,529 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001A04D995640>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:39:57,532 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70433
+2023-01-29 18:40:15,588 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001885E03DA80>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:40:15,592 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70433
+2023-01-29 18:40:17,060 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001885DF7DC00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:40:17,064 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70433
+2023-01-29 18:43:34,162 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x00000243FB8B4B40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 18:43:34,166 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70590
+2023-01-29 18:44:26,492 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'NameError'>, NameError("name 'tzname' is not defined"), <traceback object at 0x00000181A58B8240>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 13, in __call__
+    if tzname:
+NameError: name 'tzname' is not defined
+2023-01-29 18:44:26,495 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 67033
+2023-01-29 19:00:27,743 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000022240F14980>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:00:27,747 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70590
+2023-01-29 19:03:00,713 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000021932D08F80>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:03:00,717 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70587
+2023-01-29 19:03:01,296 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000021932C93B40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:03:01,300 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70587
+2023-01-29 19:03:02,862 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000021932F3DC80>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:03:02,865 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70450
+2023-01-29 19:03:04,540 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000021932F9B680>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:03:04,544 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70587
+2023-01-29 19:03:08,730 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000021932F9B940>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:03:08,734 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70587
+2023-01-29 19:05:31,797 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001D863314A00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:05:31,800 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70587
+2023-01-29 19:05:33,166 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001D8630FC840>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:05:33,169 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70587
+2023-01-29 19:05:36,210 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000001D863127980>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 14, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:05:36,213 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70587
+2023-01-29 19:15:14,592 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000002150DB839C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 15, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:15:14,596 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70579
+2023-01-29 19:15:16,121 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000002150D97CA40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 15, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:15:16,125 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70579
+2023-01-29 19:15:18,598 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000002150DD89D00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 15, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:15:18,601 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70579
+2023-01-29 19:15:21,362 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x000002150D9F4B40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 15, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-29 19:15:21,365 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70579
+2023-01-30 20:55:39,084 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('New York'), <traceback object at 0x0000026D764727C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 15, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'New York'
+2023-01-30 20:55:39,105 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70579
+2023-02-01 18:50:53,083 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('Paris'), <traceback object at 0x000001AB6D1B3A40>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 17, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'Paris'
+2023-02-01 18:50:53,088 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70817
+2023-02-01 18:51:47,756 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'pytz.exceptions.UnknownTimeZoneError'>, UnknownTimeZoneError('Paris'), <traceback object at 0x000001B7F39BB4C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\newsportal\news\middlewares.py", line 17, in __call__
+    timezone.activate(pytz.timezone(tzname))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\pytz\__init__.py", line 188, in timezone
+    raise UnknownTimeZoneError(zone)
+pytz.exceptions.UnknownTimeZoneError: 'Paris'
+2023-02-01 18:51:47,762 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 70661
+2023-02-01 18:56:23,313 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid filter: 'timezone'"), <traceback object at 0x000001B55126C340>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'timezone'
+2023-02-01 18:56:23,327 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 272600
+2023-02-01 18:57:51,233 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid filter: 'TIME_ZONE'"), <traceback object at 0x000001B551229B80>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 698, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 606, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'TIME_ZONE'
+2023-02-01 18:57:51,243 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 272506
+2023-02-01 19:06:55,579 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 18: 'timezone.localtime(timezone.now()).hour', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000001D58AC272C0>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'timezone.localtime(timezone.now()).hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 18: 'timezone.localtime(timezone.now()).hour', expected 'endblock'. Did you forget to register or load this tag?
+2023-02-01 19:06:55,638 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 250117
+2023-02-01 19:08:19,077 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 18: 'TIME_ZONE.localtime(timezone.now()).hour', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000001D58AC42180>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'TIME_ZONE.localtime(timezone.now()).hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 18: 'TIME_ZONE.localtime(timezone.now()).hour', expected 'endblock'. Did you forget to register or load this tag?
+2023-02-01 19:08:19,088 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 250130
+2023-02-01 19:08:36,237 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 18: 'TIME_ZONE.localtime(timezone.now()).hour', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x000001D58AAB3E00>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'TIME_ZONE.localtime(timezone.now()).hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 18: 'TIME_ZONE.localtime(timezone.now()).hour', expected 'endblock'. Did you forget to register or load this tag?
+2023-02-01 19:08:36,248 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 250111
+2023-02-01 19:49:55,617 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\utils\log.py (<class 'django.template.exceptions.TemplateSyntaxError'>, TemplateSyntaxError("Invalid block tag on line 18: 'get_hour', expected 'endblock'. Did you forget to register or load this tag?"), <traceback object at 0x0000023DE6AF2680>): Internal Server Error: /news/
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'get_hour'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\template\base.py", line 558, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 18: 'get_hour', expected 'endblock'. Did you forget to register or load this tag?
+2023-02-01 19:49:55,633 ERROR C:\Skillfactory\Projects\SkillFactory-D2.9-Zaplatin\venv\lib\site-packages\django\core\servers\basehttp.py None: "GET /news/ HTTP/1.1" 500 249687

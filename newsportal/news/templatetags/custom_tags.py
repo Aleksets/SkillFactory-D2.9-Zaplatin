@@ -1,4 +1,5 @@
 from django import template
+from django.utils import timezone
 
 register = template.Library()
 
@@ -9,3 +10,8 @@ def url_replace(context, **kwargs):
     for k, v in kwargs.items():
         d[k] = v
     return d.urlencode()
+
+
+@register.simple_tag
+def get_hour():
+    return timezone.localtime(timezone.now()).hour

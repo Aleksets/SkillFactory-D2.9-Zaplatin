@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
-    <p>Здравствуй, {{ username }}! Новости за прошедшую неделю в разделе "{{ category }}"!</p>
+    <p>{% trans "Hello," %} {{ username }}! {% trans "News for the past week in the category" %} "{{ category }}"!</p>
     {% for post in posts %}
         <p><a href="{{ link }}{{ post.id }}">{{ post.title }}</a></p>
     {% endfor %}

@@ -1,8 +1,12 @@
+<!DOCTYPE html>
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
-
+{% load i18n %}
+<html lang="en">
 <!--  загружаем пользовательские фильтры -->
 {% load custom_filters %}
+<!--  загружаем пользовательские тэги -->
+{% load custom_tags %}
 <!--  загружаем кэш -->
 {% load cache %}
 <!-- Название у нас будет News -->
@@ -13,18 +17,34 @@
 {% endcache %}
 <!-- В контенте на странице мы выводим все новости/статьи -->
 {% block content %}
-    <h1>Новости и статьи</h1>
-    <h3>Всего на текущий момент: {{ page_obj.paginator.count }}</h3>
+    {% get_hour as HOUR %}
+    {% if HOUR > 19 or HOUR < 7 %}
+        <style>
+            body {
+                background-color: cadetblue;
+            }
+        </style>
+    {% else %}
+        <style>
+            body {
+                background-color: white;
+            }
+        </style>
+    {% endif %}
+    {{ TIME_ZONE }} <!-- Отображаем выбранный часовой пояс  -->
+    {{ current_time }} <!-- Отображаем время в выбранном часовом поясе  -->
+    <h1>{% trans "News and articles" %}</h1>
+    <h3>{% trans "Total at the moment:" %} {{ page_obj.paginator.count }}</h3>
     <hr>
     {% if news %}
         <table>
             {% cache 30 header %}
                 <tr>
-                    <td>Заголовок</td>
-                    <td>Дата публикации</td>
-                    <td>Превью</td>
+                    <td>{% trans "Title" %}</td>
+                    <td>{% trans "Publication date" %}</td>
+                    <td>{% trans "Preview" %}</td>
                     {% if perms.news.change_post or perms.news.delete_post %}
-                        <td>Действия</td>
+                        <td>{% trans "Actions" %}</td>
                     {% endif %}
                 </tr>
             {% endcache %}
@@ -37,14 +57,14 @@
                     <td>
                         {# Здесь доступ для каждой ссылки теперь будем проверять отдельно #}
                         {% if request.user.is_staff %}
-                            <a href="{% url 'post_update' post.id %}">Изменить</a>
-                            <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                            <a href="{% url 'post_update' post.id %}">{% trans "Change" %}</a>
+                            <a href="{% url 'post_delete' post.id %}">{% trans "Delete" %}</a>
                         {% elif post.author.author == request.user %}
                             {% if perms.news.change_post %}
-                                <a href="{% url 'post_update' post.id %}">Изменить</a>
+                                <a href="{% url 'post_update' post.id %}">{% trans "Change" %}</a>
                             {% endif %}
                             {% if perms.news.delete_post %}
-                                <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                                <a href="{% url 'post_delete' post.id %}">{% trans "Delete" %}</a>
                             {% endif %}
                         {% endif %}
                     </td>
@@ -53,7 +73,7 @@
             {% endfor %}
         </table>
     {% else %}
-        <h2>Новостей нет!</h2>
+        <h2>{% trans "No news!" %}</h2>
     {% endif %}
 
     {% cache 30 pagination %}
@@ -85,3 +105,4 @@
         {% endif %}
     {% endcache %}
 {% endblock content %}
+</html>

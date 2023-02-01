@@ -1,4 +1,6 @@
 from django import template
+from django.utils.translation import gettext as _ # импортируем функцию для перевода
+
 
 register = template.Library()
 
@@ -25,4 +27,4 @@ def censor(text, symbol='*'):
                 text_list[i] = text_list[i].replace(word[1:-1], symbol * (len(word) - 1), 1)
         return f'{" ".join(text_list)}'
     except AttributeError:
-        return 'Цензура может быть применена только к тексту'
+        return _('Censorship can only be applied to text')

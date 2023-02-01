@@ -3,13 +3,24 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.core.cache import cache  # импортируем наш кэш
 from django.core.exceptions import PermissionDenied
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.utils import timezone
+from django.utils.translation import gettext as _ # импортируем функцию для перевода
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.http.response import HttpResponse #  импортируем респонс для проверки текста
+
 from .filters import PostFilter
 from .forms import PostForm
 from .models import Post, Author, Category
+
+import pytz  # импортируем стандартный модуль для работы с часовыми поясами
+
+my_timezones = {
+    'Europe/Moscow': 'Europe/Moscow',
+    'Europe/Paris': 'Europe/Paris',
+    'America/New_York': 'America/New_York',
+}
 
 
 class NewsList(ListView):
@@ -24,6 +35,29 @@ class NewsList(ListView):
     # Его надо указать, чтобы обратиться к списку объектов в html-шаблоне.
     context_object_name = 'news'
     paginate_by = 10  # вот так мы можем указать количество записей на странице
+
+    # def get(self, request):
+    #     # .  Translators: This message appears on the home page only
+    #     models = Post.objects.all()
+    #     context = {
+    #         'models': models,
+    #         'current_time': timezone.now(),
+    #         'timezones': my_timezones  # добавляем в контекст нужные часовые пояса
+    #     }
+    #     return HttpResponse(render(request, 'news.html', context))
+    #
+    def get_context_data(self, **kwargs):
+        current_time = timezone.localtime(timezone.now())
+        context = super().get_context_data(**kwargs)
+        context['current_time'] = current_time
+        context['timezones'] = my_timezones
+        # здесь дописываем свои данные при наличии
+        return context
+
+    #  по пост-запросу будем добавлять в сессию часовой пояс, который и будет обрабатываться написанным нами ранее middleware
+    def post(self, request):
+        request.session['django_timezone'] = request.POST['timezone']
+        return redirect('news')
 
 
 class PostDetail(DetailView):
@@ -127,7 +161,7 @@ class PostUpdate(LoginRequiredMixin, PermissionRequiredMixin, UpdateView):
         return obj
 
     def form_valid(self, form):
-        self.obje = form.save(commit=False)
+        self.object = form.save(commit=False)
         # Добавляем текущего пользователя в форму
         self.object.author = Author.objects.get(author=self.request.user)
         self.object.save()
@@ -150,7 +184,7 @@ def subscribe(request, pk1, pk2):
     user = request.user
     category = Category.objects.get(id=pk2)
     category.subscribers.add(user)
-    message = 'Вы успешно подписались на рассылку новостей в категории'
+    message = _('You have successfully subscribed to the newsletter in the category')
     return render(request, 'subscribe.html', {'post': post, 'category': category, 'message': message})
 
 
@@ -160,5 +194,5 @@ def unsubscribe(request, pk1, pk2):
     user = request.user
     category = Category.objects.get(id=pk2)
     category.subscribers.remove(user)
-    message = 'Вы успешно отписались от рассылки новостей в категории'
+    message = _('You have successfully unsubscribed from the newsletter in the category')
     return render(request, 'unsubscribe.html', {'post': post, 'category': category, 'message': message})

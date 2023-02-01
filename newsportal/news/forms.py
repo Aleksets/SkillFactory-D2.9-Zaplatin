@@ -1,5 +1,6 @@
 from django import forms
 from django.core.exceptions import ValidationError
+from django.utils.translation import gettext as _ # импортируем функцию для перевода
 from .models import Post
 
 
@@ -18,11 +19,11 @@ class PostForm(forms.ModelForm):
         title = cleaned_data.get("title")
         if title is not None and len(title) < 20:
             raise ValidationError({
-                "title": "Заголовок должен быть не менее 20 символов!"
+                "title": _("Title must be at least 20 characters!")
             })
         text = cleaned_data.get("text")
         if text == title:
             raise ValidationError({
-                "text": "Текст не должен совпадать с заголовком!"
+                "text": _("The text must not match the title!")
             })
         return cleaned_data

@@ -1,6 +1,8 @@
 from django_filters import FilterSet, ModelMultipleChoiceFilter, DateFilter
 from django.forms import DateInput
+from django.utils.translation import gettext as _ # импортируем функцию для перевода
 from .models import Post, Category
+
 
 # Создаем свой набор фильтров для модели Post.
 class PostFilter(FilterSet):
@@ -8,7 +10,7 @@ class PostFilter(FilterSet):
     category = ModelMultipleChoiceFilter(
         field_name='postcategory__category',
         queryset=Category.objects.all(),
-        label='Категория',
+        label=_('Category'),
     )
     # позже указанной даты
     added_after = DateFilter(
@@ -18,7 +20,7 @@ class PostFilter(FilterSet):
             format='%d.%m.%Y',
             attrs={'type': 'date'},
         ),
-        label='Позже указанной даты',
+        label=_('Later than specified date'),
     )
 
     class Meta:

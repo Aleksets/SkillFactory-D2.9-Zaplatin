@@ -1,0 +1,283 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-29 15:34+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\news\filters.py:12
+msgid "Category"
+msgstr "Категория"
+
+#: .\news\filters.py:22
+msgid "Later than specified date"
+msgstr "Позже указанной даты"
+
+#: .\news\forms.py:22
+msgid "Title must be at least 20 characters!"
+msgstr "Заголовок должен быть не менее 20 символов!"
+
+#: .\news\forms.py:27
+msgid "The text must not match the title!"
+msgstr "Текст не должен совпадать с заголовком"
+
+#: .\news\management\commands\delnewsbycat.py:7
+msgid "Delete news in the specified category"
+msgstr "Удалить новости указанной категории"
+
+#: .\news\management\commands\delnewsbycat.py:8
+msgid "You didn't specify a category"
+msgstr "Вы не указали категорию"
+
+#: .\news\management\commands\delnewsbycat.py:16
+msgid "List of categories"
+msgstr "Список категорий"
+
+#: .\news\management\commands\delnewsbycat.py:29
+msgid "Category(s)"
+msgstr "Категория(ии)"
+
+#: .\news\management\commands\delnewsbycat.py:29
+msgid "absent"
+msgstr "отсутствует(ют)"
+
+#: .\news\management\commands\delnewsbycat.py:33
+msgid "Do you really want to delete all news in"
+msgstr "Вы точно хотите удалить все новости в"
+
+#: .\news\management\commands\delnewsbycat.py:34
+msgid "category? Yes/no"
+msgstr "категории? Да/нет"
+
+#: .\news\management\commands\delnewsbycat.py:36
+msgid "Yes"
+msgstr "Да"
+
+#: .\news\management\commands\delnewsbycat.py:39
+msgid "News in category(s)"
+msgstr "Новости в категории(ях)"
+
+#: .\news\management\commands\delnewsbycat.py:40
+msgid "removed successfully"
+msgstr "успешно удалены"
+
+#: .\news\management\commands\delnewsbycat.py:43
+msgid "You have not confirmed the deletion of news"
+msgstr "Вы не подтвердили удаление новости(ей)"
+
+#: .\news\models.py:59
+msgid "Article"
+msgstr "Статья"
+
+#: .\news\models.py:60
+msgid "News"
+msgstr "Новость"
+
+#: .\news\tasks.py:68
+msgid "News for the past week"
+msgstr "Новости за прошедшую неделю"
+
+#: .\news\templates\account\email\email_confirmation_signup_message.html:13
+msgid "Thank you for registering,"
+msgstr "Спасибо за регистрацию,"
+
+#: .\news\templates\account\email\email_confirmation_signup_message.html:14
+msgid "Follow"
+msgstr "Перейти"
+
+#: .\news\templates\account\email\email_confirmation_signup_message.html:14
+msgid "the link"
+msgstr "по ссылке"
+
+#: .\news\templates\account\email\email_confirmation_signup_message.html:14
+msgid "to activate your account."
+msgstr "для активации Вашего аккаунта"
+
+#: .\news\templates\account\email\email_confirmation_subject.txt:3
+msgid "Confirmation of registration"
+msgstr "Подтверждение регистрации"
+
+#: .\news\templatetags\custom_filters.py:30
+msgid "Censorship can only be applied to text"
+msgstr "Цензурирование может быть применено только к тексту"
+
+#: .\news\views.py:154
+msgid "You have successfully subscribed to the newsletter in the category"
+msgstr "Вы успешно подписались на получение новостей в категории"
+
+#: .\news\views.py:164
+msgid "You have successfully unsubscribed from the newsletter in the category"
+msgstr "Вы успешно отписались от получения новостей в категории"
+
+#: .\templates\403.html:8
+msgid "Error 403"
+msgstr "Ошибка 403"
+
+#: .\templates\403.html:11
+msgid "You definitely don't have access to this page..."
+msgstr "Вы определенно не имеете доступ к этой странице..."
+
+#: .\templates\403.html:12
+msgid ""
+"If you are already logged in, you may need to contact the site administrator."
+msgstr ""
+"Если Вы успешно вошли на сайт, возможно, Вам стоит обратиться к "
+"администратору."
+
+#: .\templates\403.html:14
+msgid "If you are not registered on the site, you are welcome:"
+msgstr "Если Вы не зарегистрированы на сайте, предлагаем Вам это сделать:"
+
+#: .\templates\403.html:15
+msgid "Register on the site"
+msgstr "Зарегистрироваться на сайте"
+
+#: .\templates\403.html:18
+msgid "If you are not yet authorized on the site, we suggest you do this:"
+msgstr "Если Вы не авторизованы на сайте, рекомендуем это сделать:"
+
+#: .\templates\403.html:19
+msgid "Authorize to the site"
+msgstr "Авторизация на сайте"
+
+#: .\templates\flatpages\default.html:33
+msgid "Enter or register"
+msgstr "Войти или зарегистрироваться"
+
+#: .\templates\flatpages\default.html:35
+msgid "Sign out"
+msgstr "Выйти из аккаунта"
+
+#: .\templates\flatpages\default.html:39
+msgid "News list"
+msgstr "Список новостей"
+
+#: .\templates\flatpages\default.html:42
+msgid "News search"
+msgstr "Поиск по новостям"
+
+#: .\templates\flatpages\default.html:46
+msgid "Create news/article"
+msgstr "Создать новость/статью"
+
+#: .\templates\new_post_email.html:11 .\templates\week_posts_email.html:11
+msgid "Hello,"
+msgstr "Здравствуй,"
+
+#: .\templates\new_post_email.html:11
+msgid "! New article in your favorite category"
+msgstr "Новая статья в твоем любимом разделе"
+
+#: .\templates\news.html:21 .\templates\news_search.html:20
+msgid "News and articles"
+msgstr "Новости и статьи"
+
+#: .\templates\news.html:22
+msgid "Total at the moment:"
+msgstr "Всего на текущий момент:"
+
+#: .\templates\news.html:28 .\templates\news_search.html:33
+msgid "Title"
+msgstr "Заголовок"
+
+#: .\templates\news.html:29 .\templates\news_search.html:34
+msgid "Publication date"
+msgstr "Дата публикации"
+
+#: .\templates\news.html:30 .\templates\news_search.html:35
+msgid "Preview"
+msgstr "Превью"
+
+#: .\templates\news.html:32 .\templates\news_search.html:37
+msgid "Actions"
+msgstr "Действия"
+
+#: .\templates\news.html:45 .\templates\news.html:49
+#: .\templates\news_search.html:48 .\templates\news_search.html:52
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\news.html:46 .\templates\news.html:52
+#: .\templates\news_search.html:49 .\templates\news_search.html:55
+#: .\templates\post_delete.html:13
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\news.html:61
+msgid "No news!"
+msgstr "Новостей нет!"
+
+#: .\templates\news_search.html:21
+msgid "Total news found:"
+msgstr "Всего найдено новостей:"
+
+#: .\templates\news_search.html:63
+msgid "There are no news matching the specified search criteria!"
+msgstr "Не найдено новостей в соответствии с Вашим запросом"
+
+#: .\templates\post.html:13
+msgid "News/article"
+msgstr "Новость/статья"
+
+#: .\templates\post.html:28
+msgid "Subscribe to category"
+msgstr "Подписаться на категорию"
+
+#: .\templates\post.html:31
+msgid "You are already subscribed to the category"
+msgstr "Вы уже подписаны на категорию"
+
+#: .\templates\post.html:32
+msgid "Unsubscribe"
+msgstr "Отписаться"
+
+#: .\templates\post_delete.html:9
+msgid "Deleting a news/article"
+msgstr "Удаление новости/статьи"
+
+#: .\templates\post_edit.html:9
+msgid "Adding/changing news/article"
+msgstr "Создание/изменение новости/статьи"
+
+#: .\templates\post_edit.html:13
+msgid "You can't publish more than three news per day!"
+msgstr "Вы не можете публиковать больше трех новостей в день!"
+
+#: .\templates\post_edit.html:14
+msgid "Back to"
+msgstr "Вернуться к"
+
+#: .\templates\post_edit.html:14
+msgid "news list"
+msgstr "списку новостей"
+
+#: .\templates\subscribe.html:8
+msgid "Subscribe to a category"
+msgstr "Подписаться на категорию"
+
+#: .\templates\subscribe.html:13 .\templates\unsubscribe.html:13
+msgid "Go to news page"
+msgstr "Перейти на страницу новости"
+
+#: .\templates\unsubscribe.html:8
+msgid "Category unsubscribe"
+msgstr "Отписаться от категории"
+
+#: .\templates\week_posts_email.html:11
+msgid "News for the past week in the category"
+msgstr "Новости за прошедшую неделю в категории"

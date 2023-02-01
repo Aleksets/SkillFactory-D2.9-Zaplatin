@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
+<html lang="en">
 <!--  загружаем пользовательские фильтры -->
 {% load custom_filters %}
 <!--  загружаем пользовательские тэги -->
@@ -14,8 +15,8 @@
 
 <!-- В контенте на странице мы выводим все новости/статьи -->
 {% block content %}
-    <h1>Новости и статьи</h1>
-    <h3>Всего найдено новостей: {{ page_obj.paginator.count }}</h3>
+    <h1>{% trans "News and articles" %}</h1>
+    <h3>{% trans "Total news found:" %} {{ page_obj.paginator.count }}</h3>
     {# Добавляем форму, которая объединяет набор полей, которые будут отправляться в запросе #}
     <form action="" method="get">
         {# Переменная, которую мы передали через контекст, может сгенерировать нам форму с полями #}
@@ -27,11 +28,11 @@
     {% if news_search %}
         <table>
             <tr>
-                <td>Заголовок</td>
-                <td>Дата публикации</td>
-                <td>Превью</td>
+                <td>{% trans "Title" %}</td>
+                <td>{% trans "Publication date" %}</td>
+                <td>{% trans "Preview" %}</td>
                 {% if perms.news.change_post or perms.news.delete_post %}
-                    <td>Действия</td>
+                    <td>{% trans "Actions" %}</td>
                 {% endif %}
             </tr>
             {% for post in news_search %}
@@ -42,14 +43,14 @@
                 <td>
                     {# Здесь доступ для каждой ссылки теперь будем проверять отдельно #}
                     {% if request.user.is_staff %}
-                        <a href="{% url 'post_update' post.id %}">Изменить</a>
-                        <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                        <a href="{% url 'post_update' post.id %}">{% trans "Change" %}</a>
+                        <a href="{% url 'post_delete' post.id %}">{% trans "Delete" %}</a>
                     {% elif post.author.author == request.user %}
                         {% if perms.news.change_post %}
-                            <a href="{% url 'post_update' post.id %}">Изменить</a>
+                            <a href="{% url 'post_update' post.id %}">{% trans "Change" %}</a>
                         {% endif %}
                         {% if perms.news.delete_post %}
-                            <a href="{% url 'post_delete' post.id %}">Удалить</a>
+                            <a href="{% url 'post_delete' post.id %}">{% trans "Delete" %}</a>
                         {% endif %}
                     {% endif %}
                 </td>
@@ -57,7 +58,7 @@
             {% endfor %}
         </table>
     {% else %}
-        <h2>Новости по заданным критериям поиска отсутствуют!</h2>
+        <h2>{% trans "There are no news matching the specified search criteria!" %}</h2>
     {% endif %}
 
     {# Добавляем пагинацию на страницу #}

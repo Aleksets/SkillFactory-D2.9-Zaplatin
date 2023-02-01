@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load i18n %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
 </head>
 <body>
-    <p>Здравствуй, {{ username }}! Новая статья в твоём любимом разделе "{{ category }}"!</p>
+    <p>{% trans "Hello," %} {{ username }}{% trans "! New article in your favorite category" %} "{{ category }}"!</p>
     <h2><a href="{{ link }}{{ pk }}">{{ title }}</a></h2>
     <p>{{ text|truncatechars:50 }}</p>
 </body>

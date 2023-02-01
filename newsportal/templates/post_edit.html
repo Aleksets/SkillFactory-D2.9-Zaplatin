@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
 {% extends 'flatpages/default.html' %}
+
+{% load i18n %}
+<html lang="en">
 {% block content %}
-<h1>Добавление/изменение новости/статьи</h1>
+<h1>{% trans "Adding/changing news/article" %}</h1>
 <hr>
 <form action="" method="post">
     {% if post_limit %}
-        Вы не можете публиковать более трёх новостей в сутки!
-        <p>Вернутся к <a href="{%  url 'news' %}">списку новостей</a>.</p>
+        {% trans "You can't publish more than three news per day!" %}
+        <p>{% trans "Back to" %} <a href="{%  url 'news' %}">{% trans "news list" %}</a>.</p>
     {% else %}
         {% csrf_token %}
         {{ form.as_p }}

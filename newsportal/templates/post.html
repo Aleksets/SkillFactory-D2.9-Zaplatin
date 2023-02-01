@@ -1,6 +1,9 @@
+<!DOCTYPE html>
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
+<html lang="en">
 <!--  загружаем пользовательские фильтры -->
 {% load custom_filters %}
 <!--  загружаем кэш -->
@@ -8,7 +11,7 @@
 <!-- Название у нас будет Новость/статья -->
 {% cache 30 title %}
     {% block title %}
-        Новость/статья
+        {% trans "News/article" %}
     {% endblock title %}
 {% endcache %}
 
@@ -23,14 +26,15 @@
         {% if request.user.is_authenticated %}
             {% for category in post.category.all %}
                 {% if category not in request.user.categories.all %}
-                    <p><a href="{% url 'subscribe' post.id category.id %}">Подписаться на категорию "{{ category }}"</a></p>
+                    <p><a href="{% url 'subscribe' post.id category.id %}">{% trans "Subscribe to category" %} "{{ category }}"</a></p>
                 {% else %}
                     <p>
-                        Вы уже подписаны на категорию "{{ category }}"
-                        <a href="{% url 'unsubscribe' post.id category.id %}">Отписаться</a>
+                        {% trans "You are already subscribed to the category" %} "{{ category }}"
+                        <a href="{% url 'unsubscribe' post.id category.id %}">{% trans "Unsubscribe" %}</a>
                     </p>
                 {% endif %}
             {% endfor %}
         {% endif %}
     {% endcache%}
 {% endblock content %}
+</html>

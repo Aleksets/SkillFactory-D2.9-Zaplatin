@@ -1,12 +1,17 @@
+<!DOCTYPE html>
 <!--  наследуемся от шаблона default.html, который мы создавали для flatpages -->
 {% extends 'flatpages/default.html' %}
 
+{% load i18n %}
+<html lang="en">
+
 <!-- Название страницы -->
 {% block title %}
-    Отписка от категории "{{category}}"
+    {% trans "Category unsubscribe" %} "{{category}}"
 {% endblock title %}
 
 {% block content %}
     <h1>{{ message }} "{{ category }}"</h1>
-    <a href="{% url 'post' post.id %}">Перейти на страницу новости</a>
+    <a href="{% url 'post' post.id %}">{% trans "Go to news page" %}</a>
 {% endblock content %}
+</html>
